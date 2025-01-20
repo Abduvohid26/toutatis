@@ -105,6 +105,7 @@ def main():
     search_type = "id" if args.id else "username"
     search = args.id or args.username
     infos = getInfo(search, sessionsId, searchType=search_type)
+    print(infos)
     if not infos.get("user"):
         exit(infos["error"])
 
